@@ -1,8 +1,8 @@
 <?php
-$username="dev9_connect";//change username 
-$password="Ogtrlpn0o6"; //change password
-$host="localhost";
-$db_name="dev9_connect"; //change databasename
+$username = "cbswkspcdev_db"; //change username 
+$password = "uvmnm3myVD"; //change password
+$host = "localhost";
+$db_name = "cbswkspcdev_db"; //change databasename
 
 
 $con=mysqli_connect($host,$username,$password,$db_name);

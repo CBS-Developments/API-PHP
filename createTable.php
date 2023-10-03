@@ -12,39 +12,16 @@ if ($con->connect_error) {
 }
 
 
-$sql = "CREATE TABLE IF NOT EXISTS paid_bill ( 
+$sql = "CREATE TABLE IF NOT EXISTS user ( 
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    paid_bill_id INT(15) NOT NULL,
-    bill_type_id INT(3) NOT NULL,
-    bill_type_name VARCHAR(255) NOT NULL,
-    month_ VARCHAR(50) NOT NULL,
-    month_code VARCHAR(50) NOT NULL,
-    year_ VARCHAR(50) NOT NULL,
-    year_code VARCHAR(50) NOT NULL,
-    paid_date VARCHAR(50) NOT NULL,
-    paid_time_stamp INT(15) NOT NULL,
-    amount DECIMAL(20,2) NOT NULL,
-    payment_type VARCHAR(50) NOT NULL,
-    pay_type INT(3) NOT NULL,
-    bank VARCHAR(50) NOT NULL,
-    bank_code VARCHAR(50) NOT NULL,
-    cheque_or_trans_id VARCHAR(50) NOT NULL,
-    remark VARCHAR(255) NOT NULL,
-    paid_bill_create_by_id VARCHAR(50) NOT NULL,
-    paid_bill_create_by VARCHAR(50) NOT NULL,
-    paid_bill_create_date VARCHAR(50) NOT NULL,
-    paid_bill_created_timestamp INT(15) NOT NULL,
-    paid_bill_edit_by_id VARCHAR(50) NOT NULL,
-    paid_bill_edit_by VARCHAR(50) NOT NULL,
-    paid_bill_edit_date VARCHAR(50) NOT NULL,
-    paid_bill_edit_timestamp INT(15) NOT NULL,
-    paid_bill_delete_by_id VARCHAR(50) NOT NULL,
-    paid_bill_delete_by VARCHAR(50) NOT NULL,
-    paid_bill_delete_date VARCHAR(50) NOT NULL,
-    paid_bill_delete_time_stamp INT(15) NOT NULL,
-    paid_bill_delete_status INT(3) NOT NULL,
-    updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP)"; 
+    user_name VARCHAR(100) NOT NULL,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password_ VARCHAR(100) NOT NULL,
+    phone INT(10) NOT NULL,
+    user_role INT(11) NOT NULL,
+    activate INT(11) NOT NULL)"; 
  if ($con->query($sql) === TRUE) {
 
     echo "Table created successfully";
