@@ -4,9 +4,9 @@ header("Content-type: application/json; charset=utf-8");
 require_once("dbconfig.php");
 
 $email = $_POST['email'];
-$phone = $_POST['phone']; // Add this line to retrieve the phone number from the POST request
+$password_ = $_POST['password_']; // Add this line to retrieve the phone number from the POST request
 
-$query = "SELECT * FROM user WHERE email='$email' OR phone='$phone'"; // Change the query to search by email or phone
+$query = "SELECT * FROM user WHERE email='$email' AND password_='$password_'"; // Change the query to search by email or phone
 $res = mysqli_query($con,$query);
 $data = mysqli_fetch_array($res);
 if ($data != null){
