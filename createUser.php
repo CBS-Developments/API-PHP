@@ -9,6 +9,9 @@ require_once("dbconfig.php");
     $email= $_POST['email'];
     $password_= $_POST['password_'];
     $phone= $_POST['phone'];
+    $employee_ID= $_POST['employee_ID'];
+    $designation= $_POST['designation'];
+    $company= $_POST['company'];
     $user_role= $_POST['user_role'];
     $activate= $_POST['activate'];
     
@@ -27,6 +30,9 @@ last_name,
 email,
 password_,
 phone,
+employee_ID,
+designation,
+company,
 user_role,
 activate
 
@@ -37,6 +43,9 @@ activate
 '$email',
 '$password_',
 '$phone',
+'$employee_ID',
+'$designation',
+'$company',
 '$user_role',
 '$activate'
 
