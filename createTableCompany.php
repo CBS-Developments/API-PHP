@@ -21,7 +21,7 @@ $sql = "CREATE TABLE IF NOT EXISTS company (
     address_ VARCHAR(100) NOT NULL,
     contact_person_name VARCHAR(100) NOT NULL,
     contact_person_phone VARCHAR(100) NOT NULL,
-    contact_person_email INT(10) NOT NULL,
+    contact_person_email VARCHAR(100) NOT NULL,
     user_role INT(11) NOT NULL,
     activate INT(11) NOT NULL)"; 
  if ($con->query($sql) === TRUE) {
