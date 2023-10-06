@@ -18,8 +18,11 @@ if ($data != null){
     "email" => $data[4],
     "password_" => $data[5],
     "phone" => $data[6],
-    "user_role" => $data[7],
-    "activate" => $data[8],
+    "employee_ID" => $data[7],
+    "designation" => $data[8],
+    "company" => $data[9],
+    "user_role" => $data[10],
+    "activate" => $data[11],
     "message" => "Success"
   );
   echo json_encode($result);  
