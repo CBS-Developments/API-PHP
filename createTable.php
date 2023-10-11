@@ -12,16 +12,47 @@ if ($con->connect_error) {
 }
 
 
-$sql = "CREATE TABLE IF NOT EXISTS user ( 
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_name VARCHAR(100) NOT NULL,
-    first_name VARCHAR(100) NOT NULL,
-    last_name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    password_ VARCHAR(100) NOT NULL,
-    phone INT(10) NOT NULL,
-    user_role INT(11) NOT NULL,
-    activate INT(11) NOT NULL)"; 
+$sql = "CREATE TABLE IF NOT EXISTS main_task ( 
+    id INT(32) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    task_id VARCHAR(50) NOT NULL,
+    task_title VARCHAR(100) NOT NULL,
+    task_type INT(10) NOT NULL,
+    task_type_name VARCHAR(50) NOT NULL,
+    due_date VARCHAR(50) NOT NULL,
+    task_description VARCHAR(1000) NOT NULL,
+    task_create_by_id VARCHAR(50) NOT NULL,
+    task_create_by VARCHAR(100) NOT NULL,
+    task_create_date VARCHAR(50) NOT NULL,
+    task_create_month VARCHAR(50) NOT NULL,
+    task_created_timestamp VARCHAR(100) NOT NULL,
+    task_status VARCHAR(50) NOT NULL,
+    task_status_name VARCHAR(50) NOT NULL,
+    task_reopen_by VARCHAR(50) NOT NULL,
+    task_reopen_by_id VARCHAR(50) NOT NULL,
+    task_reopen_date VARCHAR(50) NOT NULL,
+    task_reopen_timestamp VARCHAR(50) NOT NULL,
+    task_finished_by VARCHAR(50) NOT NULL,
+    task_finished_by_id VARCHAR(50) NOT NULL,
+    task_finished_by_date VARCHAR(50) NOT NULL,
+    task_finished_by_timestamp VARCHAR(50) NOT NULL,
+    task_edit_by VARCHAR(50) NOT NULL,
+    task_edit_by_id VARCHAR(50) NOT NULL,
+    task_edit_by_date VARCHAR(50) NOT NULL,
+    task_edit_by_timestamp VARCHAR(50) NOT NULL,
+    task_delete_by VARCHAR(50) NOT NULL,
+    task_delete_by_id VARCHAR(50) NOT NULL,
+    task_delete_by_date VARCHAR(50) NOT NULL,
+    task_delete_by_timestamp VARCHAR(50) NOT NULL,
+    source_from VARCHAR(50) NOT NULL,
+    assign_to VARCHAR(50) NOT NULL,
+    company VARCHAR(50) NOT NULL,
+    document_number VARCHAR(50) NOT NULL,
+    action_taken_by_id VARCHAR(50) NOT NULL,
+    action_taken_by VARCHAR(50) NOT NULL,
+    action_taken_date VARCHAR(50) NOT NULL,
+    action_taken_timestamp VARCHAR(50) NOT NULL,
+    category_name VARCHAR(50) NOT NULL,
+    category INT(11) NOT NULL)"; 
  if ($con->query($sql) === TRUE) {
 
     echo "Table created successfully";
