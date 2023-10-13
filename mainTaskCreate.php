@@ -8,6 +8,7 @@ require_once("dbconfig.php");
     $task_type= $_POST['task_type'];
     $task_type_name= $_POST['task_type_name'];
     $due_date= $_POST['due_date'];
+    $task_description= $_POST['task_description'];
     $task_create_by_id= $_POST['task_create_by_id'];
     $task_create_by= $_POST['task_create_by'];
     $task_create_date= $_POST['task_create_date'];
@@ -39,6 +40,8 @@ require_once("dbconfig.php");
     $action_taken_by= $_POST['action_taken_by'];
     $action_taken_date= $_POST['action_taken_date'];
     $action_taken_timestamp= $_POST['action_taken_timestamp'];
+    $category_name= $_POST['category_name'];
+    $category= $_POST['category'];
 
 
 
@@ -53,6 +56,7 @@ task_title,
 task_type,
 task_type_name,
 due_date,
+task_description,
 task_create_by_id,
 task_create_by,
 task_create_date,
@@ -83,13 +87,16 @@ document_number,
 action_taken_by_id,
 action_taken_by,
 action_taken_date,
-action_taken_timestamp
+action_taken_timestamp,
+category_name,
+category
  ) VALUES (
 '$task_id',
 '$task_title',
 '$task_type',
 '$task_type_name',
 '$due_date',
+'$task_description',
 '$task_create_by_id',
 '$task_create_by',
 '$task_create_date',
@@ -120,7 +127,9 @@ action_taken_timestamp
 '$action_taken_by_id',
 '$action_taken_by',
 '$action_taken_date',
-'$action_taken_timestamp'
+'$action_taken_timestamp',
+'$category_name',
+'$category'
  )";
 
 $res = mysqli_query($con,$query);	
