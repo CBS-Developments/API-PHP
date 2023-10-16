@@ -47,7 +47,7 @@ due_date = '$due_date',
 assign_to = '$assign_to',
 source_from = '$source_from',
 category_name = '$category_name',
-category = '$category',
+category = '$category'
 
 WHERE task_id='$task_id'";
     $res = mysqli_query($con, $query);

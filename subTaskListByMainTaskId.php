@@ -5,7 +5,7 @@ require_once("dbconfig.php");
  
 $main_task_id= $_POST['main_task_id'];
 
-$query = "SELECT * FROM task WHERE main_task_id='$main_task_id' AND  task_status !='99'";
+$query = "SELECT * FROM sub_task WHERE main_task_id='$main_task_id' AND  task_status !='99'";
 
 $res = mysqli_query($con,$query);
 $rows = array();
