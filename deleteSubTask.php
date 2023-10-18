@@ -11,13 +11,13 @@ $action_taken_by = $_POST['action_taken_by'];
 $action_taken_date = $_POST['action_taken_date'];
 $action_taken_timestamp = $_POST['action_taken_timestamp'];
 
-$query = "SELECT * FROM main_task WHERE task_id='$task_id'";  
+$query = "SELECT * FROM sub_task WHERE task_id='$task_id'";  
  
 $res = mysqli_query($con,$query);
 $data = mysqli_fetch_array($res);
 
     if ($data[0] >= 1) {
-        $query = "UPDATE main_task SET  
+        $query = "UPDATE sub_task SET  
         task_status = '$task_status',
         task_status_name = '$task_status_name',
  	    task_delete_by = '$action_taken_by',
