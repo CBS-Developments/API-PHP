@@ -19,6 +19,7 @@ require_once("dbconfig.php");
     $comment_delete_by_id= $_POST['comment_delete_by_id'];
     $comment_delete_by_date= $_POST['comment_delete_by_date'];
     $comment_delete_by_timestamp= $_POST['comment_delete_by_timestamp'];
+    $comment_attachment= $_POST['comment_attachment'];
 
 $query = "SELECT * FROM comment";
 $res = mysqli_query($con,$query);
@@ -41,7 +42,8 @@ comment_edit_by_timestamp,
 comment_delete_by,
 comment_delete_by_id,
 comment_delete_by_date,
-comment_delete_by_timestamp
+comment_delete_by_timestamp,
+comment_attachment
  ) VALUES (
 '$comment_id',
 '$task_id',
@@ -58,7 +60,8 @@ comment_delete_by_timestamp
 '$comment_delete_by',
 '$comment_delete_by_id',
 '$comment_delete_by_date',
-'$comment_delete_by_timestamp'
+'$comment_delete_by_timestamp',
+'$comment_attachment'
  )";
 
 $res = mysqli_query($con,$query);	
