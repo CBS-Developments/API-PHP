@@ -1,8 +1,8 @@
 <?php
-$username = "cbswkspcdev_db"; //change username 
-$password = "uvmnm3myVD"; //change password
+$username = "cbsworkspace_db"; //change username 
+$password = "yesz46KNw2"; //change password
 $host = "localhost";
-$db_name = "cbswkspcdev_db"; //change databasename
+$db_name = "cbsworkspace_db"; //change databasename
 
 
 $con=mysqli_connect($host,$username,$password,$db_name);
