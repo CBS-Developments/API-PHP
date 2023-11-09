@@ -12,15 +12,13 @@ if ($con->connect_error) {
 }
 
 
-$sql = "CREATE TABLE IF NOT EXISTS pos_sales ( 
-    id INT(32) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    bill_no VARCHAR(50) NOT NULL,
-    date_time VARCHAR(100) NOT NULL,
-    bill_date VARCHAR(100) NOT NULL,
-    bill_month VARCHAR(50) NOT NULL,
-    cashier_ VARCHAR(50) NOT NULL,
-    bill_details VARCHAR(2000) NOT NULL,
-    sub_total VARCHAR(100) NOT NULL)"; 
+$sql = "CREATE TABLE IF NOT EXISTS itemes( 
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    item_code VARCHAR(255) NOT NULL,
+    item_name VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    available_quantity INT NOT NULL,
+    status_ VARCHAR(100) NOT NULL)"; 
  if ($con->query($sql) === TRUE) {
 
     echo "Table created successfully";

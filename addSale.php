@@ -4,6 +4,7 @@ header("Content-type: application/json; charset=utf-8");
 require_once("dbconfigB.php"); 
 
     $bill_no= $_POST['bill_no'];
+    $customer_= $_POST['customer_'];
     $date_time= $_POST['date_time'];
     $bill_date= $_POST['bill_date'];
     $bill_month= $_POST['bill_month'];
@@ -19,6 +20,7 @@ $data = mysqli_fetch_array($res);
 // create company
  $query = "INSERT INTO pos_sales(
 bill_no,
+customer_,
 date_time,
 bill_date,
 bill_month,
@@ -29,6 +31,7 @@ status_
 
  ) VALUES (
 '$bill_no',
+'$customer_',
 '$date_time',
 '$bill_date',
 '$bill_month',
