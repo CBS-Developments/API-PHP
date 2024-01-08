@@ -12,13 +12,15 @@ if ($con->connect_error) {
 }
 
 
-$sql = "CREATE TABLE IF NOT EXISTS itemes( 
+$sql = "CREATE TABLE IF NOT EXISTS parking_slots_sp( 
     id INT AUTO_INCREMENT PRIMARY KEY,
-    item_code VARCHAR(255) NOT NULL,
-    item_name VARCHAR(255) NOT NULL,
-    price DECIMAL(10, 2) NOT NULL,
-    available_quantity INT NOT NULL,
-    status_ VARCHAR(100) NOT NULL)"; 
+    solts_id VARCHAR(255) NOT NULL,
+    in_time VARCHAR(255) NOT NULL,
+    out_time VARCHAR(255) NOT NULL,
+    deference VARCHAR(255) NOT NULL,
+    used_by VARCHAR(255) NOT NULL,
+    vehicle_number VARCHAR(255) NOT NULL,
+    used_date VARCHAR(100) NOT NULL)"; 
  if ($con->query($sql) === TRUE) {
 
     echo "Table created successfully";
